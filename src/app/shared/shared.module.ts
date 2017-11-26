@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MatToolbarModule,
   MatButtonModule,
@@ -13,6 +14,7 @@ import {
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
@@ -22,6 +24,7 @@ import {
   ],
   exports: [
     CommonModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
