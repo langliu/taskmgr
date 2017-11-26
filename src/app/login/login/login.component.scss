@@ -1,0 +1,16 @@
+form {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  mat-card {
+    width: 15em;
+    height: 20em;
+    mat-input-container {
+      width: 100%;
+    }
+    mat-card-actions {
+      margin: 0;
+    }
+  }
+}
