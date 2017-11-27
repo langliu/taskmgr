@@ -5,7 +5,13 @@ export const loadSvgResources = (
   iconRegistry: MatIconRegistry,
   sanitizer: DomSanitizer
 ) => {
+  // svg图像资源地址
   const imgDir = 'assets/images/icons/';
+  // 加载用户头像集合的svg资源
+  iconRegistry.addSvgIconSetInNamespace(
+    'avatars',
+    sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}avatars.svg`)
+  );
   iconRegistry.addSvgIcon(
     'day',
     sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}day.svg`)
@@ -26,6 +32,7 @@ export const loadSvgResources = (
     'projects',
     sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}projects.svg`)
   );
+
   // 导入1到31日对应的svg资源
   for (let index = 1; index <= 31; index++) {
     iconRegistry.addSvgIcon(
