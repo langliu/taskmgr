@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material';
 
-// 引入根路由
+// 引入自定义模块
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
-import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { ProjectModule } from './project/project.module';
+
+// 导入组件
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +20,8 @@ import { CoreModule } from './core/core.module';
     MatSidenavModule,
     BrowserAnimationsModule,
     LoginModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

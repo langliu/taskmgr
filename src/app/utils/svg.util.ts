@@ -32,6 +32,14 @@ export const loadSvgResources = (
     'projects',
     sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}projects.svg`)
   );
+  iconRegistry.addSvgIcon(
+    'move',
+    sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}move.svg`)
+  );
+  iconRegistry.addSvgIcon(
+    'delete',
+    sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}delete.svg`)
+  );
 
   // 导入1到31日对应的svg资源
   for (let index = 1; index <= 31; index++) {
