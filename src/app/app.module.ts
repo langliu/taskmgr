@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 import { CoreModule } from './core/core.module';
 import { ProjectModule } from './project/project.module';
+import { TaskModule } from './task/task.module';
 
 // 导入组件
 import { AppComponent } from './app.component';
@@ -21,7 +22,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     LoginModule,
     AppRoutingModule,
-    ProjectModule
+    ProjectModule,
+    TaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { TaskHomeComponent } from './task-home.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('TaskHomeComponent', () => {
+  let component: TaskHomeComponent;
+  let fixture: ComponentFixture<TaskHomeComponent>;
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [HeaderComponent]
+        declarations: [TaskHomeComponent]
       }).compileComponents();
     })
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(TaskHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

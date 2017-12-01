@@ -40,6 +40,10 @@ export const loadSvgResources = (
     'delete',
     sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}delete.svg`)
   );
+  iconRegistry.addSvgIcon(
+    'add',
+    sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}add.svg`)
+  );
 
   // 导入1到31日对应的svg资源
   for (let index = 1; index <= 31; index++) {

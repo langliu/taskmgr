@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
   public avatars: string[] = [];
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     for (let index = 1; index <= 16; index++) {
