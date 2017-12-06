@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public darkTheme = false;
+
   switchTheme(changeTheme: boolean) {
     this.darkTheme = changeTheme;
   }
