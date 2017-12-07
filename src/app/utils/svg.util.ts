@@ -44,6 +44,18 @@ export const loadSvgResources = (
     'add',
     sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}add.svg`)
   );
+  iconRegistry.addSvgIcon(
+    'unassigned',
+    sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}unassigned.svg`)
+  );
+  iconRegistry.addSvgIcon(
+    'hand-garb-o',
+    sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}hand-garb-o.svg`)
+  );
+  iconRegistry.addSvgIcon(
+    'burger-navigation',
+    sanitizer.bypassSecurityTrustResourceUrl(`${imgDir}burger-navigation.svg`)
+  );
 
   // 导入1到31日对应的svg资源
   for (let index = 1; index <= 31; index++) {
