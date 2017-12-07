@@ -1,0 +1,27 @@
+<form>
+  <h2 mat-dialog-title>新建任务</h2>
+  <div mat-dialog-content>
+    <mat-input-container>
+      <input matInput type="text" placeholder="任务内容">
+    </mat-input-container>
+    <mat-radio-group>
+      <mat-radio-button *ngFor="let priority of priorities" [value]="priority.value">
+        {{priority.label}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <mat-input-container>
+      <input matInput [matDatepicker]="dueDatePicker" type="text" placeholder="任务截至日期">
+      <mat-datepicker-toggle matSuffix [for]="dueDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #dueDatePicker></mat-datepicker>
+    </mat-input-container>
+    <mat-input-container>
+      <input matInput [matDatepicker]="reminderDatePicker" type="text" placeholder="提醒日期">
+      <mat-datepicker-toggle matSuffix [for]="reminderDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #reminderDatePicker></mat-datepicker>
+    </mat-input-container>
+  </div>
+  <div mat-dialog-actions>
+    <button type="button" mat-raised-button color="primary">保存</button>
+    <button type="button" mat-button mat-dialog-close>关闭</button>
+  </div>
+</form>
