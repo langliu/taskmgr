@@ -25,7 +25,13 @@ export class InviteComponent implements OnInit {
 
   ngOnInit() {}
 
-  // Autocomplete显示
+  onClick(): void {}
+
+  /**
+   * Autocomplete显示
+   * @param {{id: string; name: string}} user - 用户信息
+   * @returns {string} - 返回邀请的用户
+   */
   displayUser(user: { id: string; name: string }): string {
     return user ? user.name : '';
   }
