@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  @Output() closeSidebar = new EventEmitter();
   items = [{ title: '项目', icon: 'projects', sub: '查看您的所有项目' }];
   calender = [
     { title: '月视图', icon: 'month', sub: '按月查看您的所有项目' },
@@ -19,4 +20,8 @@ export class SidebarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onClick() {
+    this.closeSidebar.emit();
+  }
 }

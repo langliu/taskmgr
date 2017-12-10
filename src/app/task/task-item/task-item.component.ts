@@ -1,14 +1,25 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostBinding,
+  HostListener,
+  Input,
+  OnInit,
+  Output
+} from '@angular/core';
+import { itemAnim } from '../../animations/item.animation';
 
 @Component({
   selector: 'app-task-item',
   templateUrl: './task-item.component.html',
-  styleUrls: ['./task-item.component.scss']
+  styleUrls: ['./task-item.component.scss'],
+  animations: [itemAnim]
 })
 export class TaskItemComponent implements OnInit {
   @Input() item;
   @Input() avatar;
   @Output() taskClick = new EventEmitter<void>();
+  @HostBinding('@item') public widerPriority = 'out';
 
   constructor() {}
 
@@ -29,5 +40,16 @@ export class TaskItemComponent implements OnInit {
    */
   onCheckBoxClick(event: Event): void {
     event.stopPropagation();
+  }
+
+  @HostListener('mouseenter')
+  onMouseEnter() {
+    this.widerPriority = 'in';
+    console.log('in');
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.widerPriority = 'out';
   }
 }
