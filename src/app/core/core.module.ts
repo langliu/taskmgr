@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SharedModule } from '../shared/shared.module';
 import { loadSvgResources } from '../utils/svg.util';
+import 'rxjs/add/operator/take';
 
 @NgModule({
   imports: [CommonModule, SharedModule, AppRoutingModule],
