@@ -82,11 +82,9 @@ export class TaskHomeComponent implements OnInit {
     }
   ];
 
-  constructor(private dialog: MatDialog) {
-  }
+  constructor(private dialog: MatDialog) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   launchNewTaskDialog() {
     this.dialog.open(NewTaskComponent, { data: { title: '新建任务' } });
@@ -137,5 +135,9 @@ export class TaskHomeComponent implements OnInit {
       default:
         break;
     }
+  }
+
+  handleQuickTask(desc: string) {
+    console.log(desc);
   }
 }
