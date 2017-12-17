@@ -1,0 +1,48 @@
+.avatar {
+  border-radius: 50%;
+  height: 64px;
+  margin: 12px;
+  overflow: hidden;
+  width: 64px;
+}
+
+.scroll-container {
+  height: 200px;
+  //overflow-y: scroll;
+}
+
+.image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.image-container .after {
+  color: #ffffff;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.image-container:hover .after {
+  background: rgba(0, 0, 0, 0.6);
+  display: block;
+}
+
+.image-container .after .zoom {
+  color: #ddd;
+  cursor: pointer;
+  font-size: 48px;
+  height: 50px;
+  left: 50%;
+  margin: -30px 0 0 -19px;
+  position: absolute;
+  top: 50%;
+  width: 45px;
+}
+
+.image-container .after .zoom:hover {
+  color: #ffffff;
+}

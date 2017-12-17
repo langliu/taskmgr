@@ -75,7 +75,8 @@ import { ImageListSelectComponent } from './image-list-select/image-list-select.
     MatNativeDateModule,
     MatSelectModule,
     MatSidenavModule,
-    DirectiveModule
+    DirectiveModule,
+    ImageListSelectComponent
   ],
   declarations: [ConfirmDialogComponent, ImageListSelectComponent],
   entryComponents: [ConfirmDialogComponent]
