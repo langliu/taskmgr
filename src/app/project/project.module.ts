@@ -15,8 +15,8 @@ import { SharedModule } from '../shared/shared.module';
     ProjectListComponent,
     ProjectItemComponent,
     NewProjectComponent,
-    InviteComponent
+    InviteComponent,
   ],
-  entryComponents: [NewProjectComponent, InviteComponent]
+  entryComponents: [NewProjectComponent, InviteComponent],
 })
 export class ProjectModule {}

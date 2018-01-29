@@ -8,6 +8,6 @@ const routes: Routes = [{path: 'tasklists', component: TaskHomeComponent}];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class TaskRoutingModule {}

@@ -9,9 +9,9 @@ describe('ImageListSelectComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [ImageListSelectComponent]
+        declarations: [ImageListSelectComponent],
       }).compileComponents();
-    })
+    }),
   );
 
   beforeEach(() => {

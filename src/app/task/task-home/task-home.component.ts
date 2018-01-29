@@ -11,7 +11,7 @@ import { slideToRight } from '../../animations/router.animation';
   selector: 'app-task-home',
   templateUrl: './task-home.component.html',
   styleUrls: ['./task-home.component.scss'],
-  animations: [slideToRight]
+  animations: [slideToRight],
 })
 export class TaskHomeComponent implements OnInit {
   @HostBinding('@routeAnim') public state;
@@ -28,11 +28,11 @@ export class TaskHomeComponent implements OnInit {
           owner: {
             id: 1,
             name: '张三',
-            avatar: 'avatars:svg-11'
+            avatar: 'avatars:svg-11',
           },
           dueDate: new Date(),
           reminder: new Date(),
-          priority: 1
+          priority: 1,
         },
         {
           id: 2,
@@ -41,13 +41,13 @@ export class TaskHomeComponent implements OnInit {
           owner: {
             id: 2,
             name: '李四',
-            avatar: 'avatars:svg-12'
+            avatar: 'avatars:svg-12',
           },
           dueDate: new Date(),
           reminder: new Date(2017, 9, 23),
-          priority: 2
-        }
-      ]
+          priority: 2,
+        },
+      ],
     },
     {
       id: 2,
@@ -61,10 +61,10 @@ export class TaskHomeComponent implements OnInit {
           owner: {
             id: 1,
             name: '张三',
-            avatar: 'avatars:svg-11'
+            avatar: 'avatars:svg-11',
           },
           dueDate: new Date(),
-          priority: 3
+          priority: 3,
         },
         {
           id: 2,
@@ -73,13 +73,13 @@ export class TaskHomeComponent implements OnInit {
           owner: {
             id: 2,
             name: '李四',
-            avatar: 'avatars:svg-12'
+            avatar: 'avatars:svg-12',
           },
           dueDate: new Date(),
-          priority: 1
-        }
-      ]
-    }
+          priority: 1,
+        },
+      ],
+    },
   ];
 
   constructor(private dialog: MatDialog) {}
@@ -96,27 +96,27 @@ export class TaskHomeComponent implements OnInit {
 
   launchUpdateTaskDialog(task): void {
     this.dialog.open(NewTaskComponent, {
-      data: { title: '修改任务', task: task }
+      data: { title: '修改任务', task: task },
     });
   }
 
   launchConfirmDialog() {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      data: { title: '删除任务列表：', content: '您确认删除该任务列表吗？' }
+      data: { title: '删除任务列表：', content: '您确认删除该任务列表吗？' },
     });
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
   launchEditDialogDialog() {
     const dialogRef = this.dialog.open(NewTaskListComponent, {
-      data: { title: '更改列表名称：' }
+      data: { title: '更改列表名称：' },
     });
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }
 
   launchNewListDialog() {
     const dialogRef = this.dialog.open(NewTaskListComponent, {
-      data: { title: '新建列表：' }
+      data: { title: '新建列表：' },
     });
     dialogRef.afterClosed().subscribe(result => console.log(result));
   }

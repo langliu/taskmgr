@@ -3,12 +3,12 @@ import {
   ElementRef,
   HostListener,
   Input,
-  Renderer2
+  Renderer2,
 } from '@angular/core';
 import { DragDropService } from '../drag-drop.service';
 
 @Directive({
-  selector: '[appDrag]'
+  selector: '[appDrag]',
 })
 export class DragDirective {
   // @Input() public dragClass: string;
@@ -30,7 +30,7 @@ export class DragDirective {
   constructor(
     private el: ElementRef,
     private rd: Renderer2,
-    private dragDropService: DragDropService
+    private dragDropService: DragDropService,
   ) {}
 
   /**
@@ -43,7 +43,7 @@ export class DragDirective {
       this.rd.addClass(this.el.nativeElement, this.draggedClass);
       this.dragDropService.setDragData({
         tag: this.dragTag,
-        data: this.dragData
+        data: this.dragData,
       });
     }
   }

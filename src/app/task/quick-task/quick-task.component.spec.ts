@@ -9,9 +9,9 @@ describe('QuickTaskComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [QuickTaskComponent]
+        declarations: [QuickTaskComponent],
       }).compileComponents();
-    })
+    }),
   );
 
   beforeEach(() => {

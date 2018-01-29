@@ -3,13 +3,13 @@ import {
   EventEmitter,
   HostListener,
   OnInit,
-  Output
+  Output,
 } from '@angular/core';
 
 @Component({
   selector: 'app-quick-task',
   templateUrl: './quick-task.component.html',
-  styleUrls: ['./quick-task.component.scss']
+  styleUrls: ['./quick-task.component.scss'],
 })
 export class QuickTaskComponent implements OnInit {
   @Output() quickTask = new EventEmitter();

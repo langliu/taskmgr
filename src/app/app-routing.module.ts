@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path: '', redirectTo: '/register', pathMatch: 'full'},
   {path: 'project', redirectTo: '/project', pathMatch: 'full'},
-  {path: 'tasklists', redirectTo: '/tasklists', pathMatch: 'full'}
+  { path: 'tasklists', redirectTo: '/tasklists', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

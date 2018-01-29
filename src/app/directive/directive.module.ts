@@ -8,6 +8,6 @@ import { DragDropService } from './drag-drop.service';
   imports: [CommonModule],
   declarations: [DragDirective, DropDirective],
   exports: [DragDirective, DropDirective],
-  providers: [DragDropService]
+  providers: [DragDropService],
 })
 export class DirectiveModule {}

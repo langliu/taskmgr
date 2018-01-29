@@ -12,6 +12,7 @@ import { TaskModule } from './task/task.module';
 
 // 导入组件
 import { AppComponent } from './app.component';
+import { QuoteService } from './services/quote.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,9 +24,9 @@ import { AppComponent } from './app.component';
     LoginModule,
     AppRoutingModule,
     ProjectModule,
-    TaskModule
+    TaskModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [QuoteService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -18,8 +18,16 @@ import 'rxjs/add/operator/take';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AppRoutingModule
-  ]
+    AppRoutingModule,
+  ],
+  providers: [
+    {
+      provide: 'BASE_CONFIG',
+      useValue: {
+        baseUrl: 'http://127.0.0.1:3000',
+      },
+    },
+  ],
 })
 export class CoreModule {
   constructor(
@@ -27,7 +35,7 @@ export class CoreModule {
     @SkipSelf()
     parent: CoreModule,
     iconRegistry: MatIconRegistry,
-    sanitizer: DomSanitizer
+    sanitizer: DomSanitizer,
   ) {
     if (parent) {
       throw new Error('模块已存在，不能再次加载！');

@@ -5,7 +5,7 @@ import {
   HostListener,
   Input,
   OnInit,
-  Output
+  Output,
 } from '@angular/core';
 import { itemAnim } from '../../animations/item.animation';
 
@@ -13,7 +13,7 @@ import { itemAnim } from '../../animations/item.animation';
   selector: 'app-task-item',
   templateUrl: './task-item.component.html',
   styleUrls: ['./task-item.component.scss'],
-  animations: [itemAnim]
+  animations: [itemAnim],
 })
 export class TaskItemComponent implements OnInit {
   @Input() item;

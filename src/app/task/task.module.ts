@@ -20,8 +20,8 @@ import { QuickTaskComponent } from './quick-task/quick-task.component';
     NewTaskComponent,
     CopyTaskComponent,
     NewTaskListComponent,
-    QuickTaskComponent
+    QuickTaskComponent,
   ],
-  entryComponents: [NewTaskComponent, CopyTaskComponent, NewTaskListComponent]
+  entryComponents: [NewTaskComponent, CopyTaskComponent, NewTaskListComponent],
 })
 export class TaskModule {}

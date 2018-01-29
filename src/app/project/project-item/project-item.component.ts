@@ -5,7 +5,7 @@ import {
   Output,
   EventEmitter,
   HostBinding,
-  HostListener
+  HostListener,
 } from '@angular/core';
 import { cardAnim } from '../../animations/card.animation';
 
@@ -13,7 +13,7 @@ import { cardAnim } from '../../animations/card.animation';
   selector: 'app-project-item',
   templateUrl: './project-item.component.html',
   styleUrls: ['./project-item.component.scss'],
-  animations: [cardAnim]
+  animations: [cardAnim],
 })
 export class ProjectItemComponent implements OnInit {
   @Input() item;

@@ -9,9 +9,9 @@ describe('TaskHomeComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [TaskHomeComponent]
+        declarations: [TaskHomeComponent],
       }).compileComponents();
-    })
+    }),
   );
 
   beforeEach(() => {

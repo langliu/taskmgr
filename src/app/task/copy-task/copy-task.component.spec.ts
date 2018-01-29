@@ -9,9 +9,9 @@ describe('CopyTaskComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [CopyTaskComponent]
+        declarations: [CopyTaskComponent],
       }).compileComponents();
-    })
+    }),
   );
 
   beforeEach(() => {

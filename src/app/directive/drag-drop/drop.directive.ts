@@ -5,12 +5,12 @@ import {
   HostListener,
   Input,
   Output,
-  Renderer2
+  Renderer2,
 } from '@angular/core';
 import { DragDropService, DragData } from '../drag-drop.service';
 
 @Directive({
-  selector: '[appDrop]'
+  selector: '[appDrop]',
 })
 export class DropDirective {
   @Input() public dragEnterClass: string;
@@ -21,7 +21,7 @@ export class DropDirective {
   constructor(
     private el: ElementRef,
     private rd: Renderer2,
-    private dragDropService: DragDropService
+    private dragDropService: DragDropService,
   ) {
     this.data$ = this.dragDropService.getDragData().take(1);
   }

@@ -3,7 +3,7 @@ import {
   ControlValueAccessor,
   NG_VALUE_ACCESSOR,
   NG_VALIDATORS,
-  FormControl
+  FormControl,
 } from '@angular/forms';
 
 @Component({
@@ -14,14 +14,14 @@ import {
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => ImageListSelectComponent),
-      multi: true
+      multi: true,
     },
     {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => ImageListSelectComponent),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class ImageListSelectComponent implements ControlValueAccessor {
   @Input() title = '选择';
@@ -49,6 +49,7 @@ export class ImageListSelectComponent implements ControlValueAccessor {
     this.selected = this.items[index];
     this.propagateChange(this.selected);
   }
+
   validate(c: FormControl): { [key: string]: any } {
     return this.selected ? null : { imageListInvalid: { valid: false } };
   }

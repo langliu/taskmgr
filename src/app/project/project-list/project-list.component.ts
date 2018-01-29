@@ -10,7 +10,7 @@ import { listAnimation } from '../../animations/list.animation';
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss'],
-  animations: [slideToRight, listAnimation]
+  animations: [slideToRight, listAnimation],
 })
 export class ProjectListComponent implements OnInit {
   @HostBinding('@routeAnim') public state: string;
@@ -19,20 +19,20 @@ export class ProjectListComponent implements OnInit {
       id: 1,
       name: '企业协作平台',
       desc: '这是一个企业内部项目',
-      coverImg: 'assets/images/covers/0.jpg'
+      coverImg: 'assets/images/covers/0.jpg',
     },
     {
       id: 2,
       name: '企业协作平台',
       desc: '这是一个企业内部项目',
-      coverImg: 'assets/images/covers/1.jpg'
+      coverImg: 'assets/images/covers/1.jpg',
     },
     {
       id: 3,
       name: '企业协作平台',
       desc: '这是一个企业内部项目',
-      coverImg: 'assets/images/covers/2.jpg'
-    }
+      coverImg: 'assets/images/covers/2.jpg',
+    },
   ];
 
   constructor(private dialog: MatDialog) {}
@@ -44,7 +44,7 @@ export class ProjectListComponent implements OnInit {
    */
   openNewProjectDialog() {
     const dialogRef = this.dialog.open(NewProjectComponent, {
-      data: { title: '新增项目：' }
+      data: { title: '新增项目：' },
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
@@ -54,8 +54,8 @@ export class ProjectListComponent implements OnInit {
           id: 4,
           name: '新项目',
           desc: '这是一个新项目',
-          coverImg: 'assets/images/covers/3.jpg'
-        }
+          coverImg: 'assets/images/covers/3.jpg',
+        },
       ];
     });
   }
@@ -73,7 +73,7 @@ export class ProjectListComponent implements OnInit {
 
   launchConfirmDialog(project) {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      data: { title: '删除项目：', content: '您确认删除该项目吗？' }
+      data: { title: '删除项目：', content: '您确认删除该项目吗？' },
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);

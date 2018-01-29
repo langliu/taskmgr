@@ -1,17 +1,17 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { DragDropService } from './drag-drop.service';
+import { QuoteService } from './quote.service';
 
-describe('DragDropService', () => {
+describe('QuoteService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DragDropService],
+      providers: [QuoteService],
     });
   });
 
   it(
     'should be created',
-    inject([DragDropService], (service: DragDropService) => {
+    inject([QuoteService], (service: QuoteService) => {
       expect(service).toBeTruthy();
     }),
   );
